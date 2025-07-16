@@ -9,7 +9,7 @@ from logger import setup_logger
 def create_app():
     app = Flask(__name__)
     app.config.from_object(Config)
-    CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}}, supports_credentials=True)
+    CORS(app, resources={r"/*": {"origins": "https://courageous-chebakia-b4346f.netlify.app"}}, supports_credentials=True)
 
     setup_logger()
     db.init_app(app)
